@@ -1,4 +1,4 @@
-package com.xworkz.core_java.Single_Inheritance;
+package com.xworkz.core_java.Inheritance.Single_Inheritance;
 
 public class Calf extends Cow 
 {

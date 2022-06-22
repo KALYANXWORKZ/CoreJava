@@ -1,4 +1,4 @@
-package com.xworkz.core_java.Single_Inheritance;
+package com.xworkz.core_java.Inheritance.Single_Inheritance;
 
 class Student {
 	String name;  int marks;
