@@ -1,4 +1,4 @@
-package com.xworkz.core_java;
+package com.xworkz.core_java.Instance_Of;
 
 public class Chocolate extends Sweet 
 {
