@@ -8,6 +8,6 @@ public class Bike {
 
 		int v = ve.getPrice();
 
-		System.out.println("Price of the bike is : " +v);
+		System.out.println("Price of the bike is : "  +v);
 	}
 }
