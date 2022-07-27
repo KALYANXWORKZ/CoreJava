@@ -8,6 +8,6 @@ public class VehicleExample {
 	
 	int getPrice(){
 		
-		 return 86500;
+		  return 86500;
 	}
 }
