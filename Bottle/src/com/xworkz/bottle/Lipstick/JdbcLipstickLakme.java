@@ -43,5 +43,7 @@ public class JdbcLipstickLakme {
 		//				Statement statement = connection.createStatement(); int noOfRows =
 		//				statement.executeUpdate(DELETE); System.out.println(noOfRows);
 
+	        	
+	        	
 	}
 }
