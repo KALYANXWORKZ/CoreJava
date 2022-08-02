@@ -1,6 +1,6 @@
 package com.xworkz.bottle.Ciggarette.Constants;
 
-public enum DBProperties { 
+public enum DBProperties {  
 	
 	URL("jdbc:mysql://localhost:3306/CIGARETTE"),USERNAME("root"),PASSWORD("1BE18CV411");
 
