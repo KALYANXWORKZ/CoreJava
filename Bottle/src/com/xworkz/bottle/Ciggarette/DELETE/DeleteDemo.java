@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 import com.xworkz.bottle.constants.DBProperties;
 
-public class DeleteDemo {
+public class DeleteDemo { 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(DBProperties.URL.getValue(),

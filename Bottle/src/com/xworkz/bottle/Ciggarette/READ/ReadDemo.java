@@ -18,7 +18,7 @@ public class ReadDemo {
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(sql);
 		boolean result = rs.next();
-		System.out.println(result);
+		System.out.println(result); 
 
 		if(result) {
 			int pid = rs.getInt(1);

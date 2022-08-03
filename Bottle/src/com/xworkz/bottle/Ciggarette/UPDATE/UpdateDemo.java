@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 import com.xworkz.bottle.constants.DBProperties;
 
-public class UpdateDemo {
+public class UpdateDemo { 
 
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {

@@ -19,7 +19,7 @@ public class InsertDemo {
 		String insert2 = "insert into cigarette.store values(4,'LIGHT',19,'WHITE',50)";
 		String insert3 = "insert into cigarette.store values(5,'MENTHOL',18,'WHITE',100)";
 
-		Statement st = con.createStatement();
+		Statement st = con.createStatement(); 
 
 		int rowAffected = st.executeUpdate(insert);
 		int rowAffected1 = st.executeUpdate(insert1);
