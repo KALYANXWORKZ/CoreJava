@@ -23,13 +23,43 @@ public class ResortRunner {
 		resortEntity.setCreateDate(LocalDate.now());
 		resortEntity.setPricePerDay(2000D);
 		resortEntity.setUpdateDate(LocalDate.now());
+		
+		resortEntity.setId(2);
+		resortEntity.setName("Eagleton");
+		resortEntity.setLocation("Mysore Road");
+		resortEntity.setCheckInTime(LocalTime.of(12, 00));
+		resortEntity.setCheckOutTime(LocalTime.of(11, 00));
+		resortEntity.setOwner("Kumaraswamy");
+		resortEntity.setCreateBy("Arjun");
+		resortEntity.setCreateDate(LocalDate.now());
+		resortEntity.setPricePerDay(3000D);
+		resortEntity.setUpdateDate(LocalDate.now());
+		
+		resortEntity.setId(3);
+		resortEntity.setName("Ezone Lagoon Resort");
+		resortEntity.setLocation("Marathalli");
+		resortEntity.setCheckInTime(LocalTime.of(12, 00));
+		resortEntity.setCheckOutTime(LocalTime.of(11, 00));
+		resortEntity.setOwner("Hanamanth");
+		resortEntity.setCreateBy("Suhas");
+		resortEntity.setCreateDate(LocalDate.now());
+		resortEntity.setPricePerDay(4000D);
+		resortEntity.setUpdateDate(LocalDate.now());
 
 		ResortDAO resortDAO = new ResortDAOImpl();
-
+		
+           //  CREATE OPERATION
 		boolean saved = resortDAO.save(resortEntity);
 		System.out.println(saved);
+		
+		// READ OPERATION
+		
+//		ResortEntity read = resortDAO.findById(2);
+//		System.out.println(read);
+		
+//		resortDAO.UpdateNameAndLocationById("Arpitha", "Chikamagalur", 1);
 
-
+//      resortDAO.deleteById(3);
 	}
 
 }
