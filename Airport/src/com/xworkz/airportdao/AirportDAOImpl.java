@@ -1,40 +1,43 @@
-package com.xworkz.bike.bike.dao;
+package com.xworkz.airportdao;
 
 import javax.persistence.EntityManager;
+import static com.xworkz.airport.util.EMFUtil.*;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import com.xworkz.bike.bikeentity.BikeEntity;
-import static com.xworkz.bike.bike.util.EMFUtil.*;
+import com.xworkz.airportentity.AirportEntity;
 
-public class BikeDAOImpl implements BikeDAO {
-	private	EntityManagerFactory factory = getFactory();
+
+
+public class AirportDAOImpl implements AirportDAO {
+	private EntityManagerFactory factory =getFactory();
 
 	@Override
-	public boolean save(BikeEntity entity) {
+	public boolean save(AirportEntity entity) {
 		EntityManager manager = factory.createEntityManager();
 		try {
 			EntityTransaction tx = manager.getTransaction();
 			tx.begin();
 			manager.persist(entity);
 			tx.commit();
+
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
 		finally {
 			manager.close();
-			factory.close();
 		}
+
 		return true;
 	}
 
 	@Override
-	public BikeEntity findById(Integer id) {
+	public AirportEntity getById(Integer id) {
 		EntityManager manager = factory.createEntityManager();
 		try {
-			BikeEntity entity = manager.find(BikeEntity.class, id);
+			AirportEntity entity = manager.find(AirportEntity.class, id);
 			if(entity!=null) {
 				System.out.println("Entity is found: "+id);
 				return entity;
@@ -50,43 +53,20 @@ public class BikeDAOImpl implements BikeDAO {
 		}
 		finally {
 			manager.close();
-		}
-		return null;
+		}		return null;
 	}
 
-
 	@Override
-	public void deleteById(Integer id) {
+	public void updateNameAndPurposeById(String newName, String newPurpose, Integer id) {
 		EntityManager manager = factory.createEntityManager();
 		try {
 			EntityTransaction tx = manager.getTransaction();
 			tx.begin();
-		BikeEntity entity =	manager.find(BikeEntity.class, id);
-		manager.remove(entity);
-		tx.commit();
-			
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-		finally {
-			manager.close();
-		}
-		
-
-	}
-
-	@Override
-	public void updateBrandAndModelById(String newBrand, Integer newModel, Integer id) {
-		EntityManager manager = factory.createEntityManager();
-		try {
-			EntityTransaction tx = manager.getTransaction();
-			tx.begin();
-			BikeEntity entity= manager.find(BikeEntity.class, id);
+			AirportEntity entity= manager.find(AirportEntity.class, id);
 			if(entity!=null) {
 				System.out.println("Entity found : "+id);
-			entity.setBrand(newBrand);
-			entity.setModel(newModel);
+			entity.setName(newName);
+			entity.setPurpose(newPurpose);
 			manager.merge(entity);
 		}
 		else {
@@ -99,8 +79,26 @@ public class BikeDAOImpl implements BikeDAO {
 		}
 		finally {
 			manager.close();
-		}		
+		}
 	}
+
+	@Override
+	public void deleteById(Integer id) {
+		EntityManager manager = factory.createEntityManager();
+		try {
+			EntityTransaction tx = manager.getTransaction();
+			tx.begin();
+		AirportEntity entity =	manager.find(AirportEntity.class, id);
+		manager.remove(entity);
+		tx.commit();
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			manager.close();
+		}
+	}
+
 }
-
-

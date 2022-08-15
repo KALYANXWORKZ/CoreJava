@@ -2,6 +2,7 @@ package com.xworkz.resort.dao;
 
 
 import javax.persistence.EntityManager;
+import static com.xworkz.resort.util.EMFUtil.*;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
@@ -15,7 +16,7 @@ public class ResortDAOImpl implements ResortDAO {
 	public boolean save(ResortEntity entity) {
 
 		try {
-			EntityManagerFactory factory = Persistence.createEntityManagerFactory("com.xworkz");
+			EntityManagerFactory factory = getFactory();
 			EntityManager manager = factory.createEntityManager();
 			EntityTransaction tx = manager.getTransaction();
 			tx.begin();
@@ -34,7 +35,7 @@ public class ResortDAOImpl implements ResortDAO {
 
 	@Override
 	public ResortEntity findById(Integer id) {
-		EntityManagerFactory factory=Persistence.createEntityManagerFactory("com.xworkz");
+		EntityManagerFactory factory=getFactory();
 		EntityManager manager=factory.createEntityManager();
 		try {
 			ResortEntity entity = manager.find(ResortEntity.class, id);
@@ -57,7 +58,7 @@ public class ResortDAOImpl implements ResortDAO {
 
 	@Override
 	public void UpdateNameAndLocationById(String newName, String newLocation, Integer id) {
-		EntityManagerFactory factory =Persistence.createEntityManagerFactory("com.xworkz");
+		EntityManagerFactory factory =getFactory();
 		EntityManager manager =factory.createEntityManager();
 		try {
 			EntityTransaction tx = manager.getTransaction();
@@ -87,7 +88,7 @@ public class ResortDAOImpl implements ResortDAO {
 
 	@Override
 	public void deleteById(Integer id) {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("com.xworkz");
+		EntityManagerFactory factory = getFactory();
 		EntityManager manager=factory.createEntityManager();
 		EntityTransaction tx = manager.getTransaction();
 		tx.begin();

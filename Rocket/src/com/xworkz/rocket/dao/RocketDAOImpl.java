@@ -6,17 +6,19 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceException;
+import static com.xworkz.rocket.util.EMFUtil.*;
+
 
 import com.xworkz.rocket.entity.RocketEntity;
 
 public class RocketDAOImpl implements RocketDAO{
-	private EntityManagerFactory factory=Persistence.createEntityManagerFactory("com.xworkz");
+	private EntityManagerFactory factory=getFactory();
 
 
 	@Override
 	public boolean save(RocketEntity entity) {
 		try {
-			EntityManagerFactory factory=Persistence.createEntityManagerFactory("com.xworkz");
+			EntityManagerFactory factory=getFactory();
 			EntityManager manager = factory.createEntityManager();
 			EntityTransaction tx = manager.getTransaction();
 			tx.begin();
@@ -35,7 +37,7 @@ public class RocketDAOImpl implements RocketDAO{
 
 	@Override
 	public RocketEntity findById(Integer id) {
-		EntityManagerFactory factory =Persistence.createEntityManagerFactory("com.xworkz");
+		EntityManagerFactory factory =getFactory();
 
 		EntityManager manager = factory.createEntityManager();
 		try {
@@ -89,7 +91,7 @@ public class RocketDAOImpl implements RocketDAO{
 
 	@Override
 	public void updateNameAndPurposeById(String newName, String newPurpose, Integer id) {
-		EntityManagerFactory factory= Persistence.createEntityManagerFactory("com.xworkz");
+		EntityManagerFactory factory= getFactory();
 
 		EntityManager manager =factory.createEntityManager();
 		try {

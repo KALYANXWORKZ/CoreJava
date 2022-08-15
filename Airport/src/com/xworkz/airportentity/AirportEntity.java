@@ -1,4 +1,4 @@
-package com.xworkz.bike.bikeentity;
+package com.xworkz.airportentity;
 
 import java.time.LocalDate;
 
@@ -13,23 +13,23 @@ import lombok.Setter;
 import lombok.ToString;
 @Getter
 @Setter
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
-
 @Entity
-@Table(name= "bike")
-public class BikeEntity {
+
+@Table(name="airport")
+public class AirportEntity {
 	@Id
 	private int id;
-	private String brand;
+	private String name;
 	private int model;
-	private String owner;
 	private String createdBy;
-	private LocalDate createDate;
-	private LocalDate updateDate;
+	private String updatedBy;
+	private LocalDate createdDate;
+	private LocalDate updatedDate;
+	private String purpose;
 	private double price;
-	private String millege;
-	
+
 
 }
