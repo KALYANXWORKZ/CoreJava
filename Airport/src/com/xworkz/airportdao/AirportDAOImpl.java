@@ -15,8 +15,9 @@ public class AirportDAOImpl implements AirportDAO {
 
 	@Override
 	public boolean save(AirportEntity entity) {
-		EntityManager manager = factory.createEntityManager();
+		EntityManager manager = null;
 		try {
+			manager = factory.createEntityManager();
 			EntityTransaction tx = manager.getTransaction();
 			tx.begin();
 			manager.persist(entity);
