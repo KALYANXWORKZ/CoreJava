@@ -69,8 +69,34 @@ public class CartoonCharacterRunner {
 //		CartoonCharacterEntity entity =dao.findByName("Doreman");
 //		System.out.println(entity);
 		
-		CartoonCharacterEntity k =dao.findByNameAndCountryAndGenderAndAuthor("Chotabheem", "India", "Male", "Hanamant");
-		System.out.println(k);
+//		CartoonCharacterEntity k =dao.findByNameAndCountryAndGenderAndAuthor("Chotabheem", "India", "Male", "Hanamant");
+//		System.out.println(k);
+		
+		
+//	    	String string = dao.findAuthorByName("Garfield");
+//		    System.out.println(string);
+		 
+		
+//		Object[] objects = dao.findNameAndCountryByAuthor("Nandan");
+//		System.out.println(objects[0]);
+//		System.out.println(objects[1]);
+		
+//		LocalDate localDate = dao.findCreatedDateByAuthor("Manoj");
+//		System.out.println(localDate);
+		
+//		dao.updateAuthorByName("Sudeep", "Mickey Mouse");
+		
+//		dao.updateTypeByName("Voilance", "Bugs Bunny");
+		
+//		dao.deleteByName("Betty Boop");
+		
+//		Long long1 = dao.total();
+//		System.out.println(long1);
+		
+		
+		CartoonCharacterEntity cartoonCharacterEntity10 = dao.findByMaxCreatedDate();
+		System.out.println(cartoonCharacterEntity10);
+	
 
 
 		
