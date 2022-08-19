@@ -30,4 +30,20 @@ public interface CartoonCharacterDAO {
 
 	CartoonCharacterEntity findByMaxCreatedDate();
 
+	List<CartoonCharacterEntity> findAll();
+
+	List<CartoonCharacterEntity> findAllByAuthor(String author);
+
+	List<CartoonCharacterEntity> findAllByAuthorAndGender(String author, String gender);
+
+	List<String> findAllName();
+
+	List<String> findAllCountry();
+
+	List<Object[]> findAllNameAndCountry();
+
+	default  List<Object[]> findAllNameAndCountryAndAuthor() {
+		return null;
+
+	}
 }

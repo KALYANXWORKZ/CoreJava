@@ -94,8 +94,23 @@ public class CartoonCharacterRunner {
 //		System.out.println(long1);
 		
 		
-		CartoonCharacterEntity cartoonCharacterEntity10 = dao.findByMaxCreatedDate();
-		System.out.println(cartoonCharacterEntity10);
+//		CartoonCharacterEntity cartoonCharacterEntity10 = dao.findByMaxCreatedDate();
+//		System.out.println(cartoonCharacterEntity10);
+		
+		
+//		dao.findAll().forEach(System.out::println);
+		
+//		dao.findAllByAuthor("Chandru").forEach(System.out::println);
+
+//		 dao.findAllByAuthorAndGender("Sharan","Male").forEach(System.out::println);
+
+//		 dao.findAllName().forEach(System.out::println);
+
+//		 dao.findAllCountry().forEach(System.out::println);
+
+//		 dao.findAllNameAndCountry().forEach(object->System.out.println(object[0]+"::"+object[1]));
+		
+		dao.findAllNameAndCountryAndAuthor().forEach(object -> System.out.println(object[0] + "::" + object[1] + "::" + object[2]));
 	
 
 
