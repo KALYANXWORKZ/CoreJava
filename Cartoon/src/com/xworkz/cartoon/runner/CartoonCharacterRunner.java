@@ -86,7 +86,7 @@ public class CartoonCharacterRunner {
 		
 //		dao.updateAuthorByName("Sudeep", "Mickey Mouse"); 
 		
-//		dao.updateTypeByName("Voilance", "Bugs Bunny"); 
+//		dao.updateTypeByName("Voilance", "Bugs Bunny");  
 		
 //		dao.deleteByName("Betty Boop");
 		
