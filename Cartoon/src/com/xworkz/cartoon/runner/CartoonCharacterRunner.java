@@ -84,7 +84,7 @@ public class CartoonCharacterRunner {
 //		LocalDate localDate = dao.findCreatedDateByAuthor("Manoj");
 //		System.out.println(localDate);
 		
-//		dao.updateAuthorByName("Sudeep", "Mickey Mouse");
+//		dao.updateAuthorByName("Sudeep", "Mickey Mouse"); 
 		
 //		dao.updateTypeByName("Voilance", "Bugs Bunny");
 		
