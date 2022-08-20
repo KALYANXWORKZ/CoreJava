@@ -89,7 +89,7 @@ public class CartoonCharacterRunner {
 //		dao.updateTypeByName("Voilance", "Bugs Bunny");  
 		 
 //		dao.deleteByName("Betty Boop");
-		  
+		   
 //		Long long1 = dao.total();  
 //		System.out.println(long1);
 		
